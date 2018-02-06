@@ -12,6 +12,7 @@ module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-build-control');
 
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
@@ -473,7 +474,7 @@ module.exports = function (grunt) {
     },
     heroku: {
       options: {
-        remote: 'git@heroku.com:example-heroku-webapp-1988.git',
+          remote: 'git@heroku.com:boiling-springs-44511.git',
         branch: 'master',
         tag: pkg.version
       }
